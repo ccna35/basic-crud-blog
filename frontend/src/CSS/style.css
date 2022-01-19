@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #fafafa;
+  color: #2d2424;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+nav {
+  margin-bottom: 3rem;
+}
+nav .navbar {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .navbar h1 {
+  font-size: 2rem;
+}
+nav .navbar h1 svg {
+  margin-right: 1rem;
+}
+nav .navbar ul a {
+  text-decoration: none;
+  color: #2d2424;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.5s;
+}
+nav .navbar ul a:hover {
+  color: #b85c38;
+}
+nav .navbar ul a:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.newPost form {
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.newPost form > * {
+  padding: 1rem;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.newPost form input[type=text] {
+  background-color: #e0c097;
+  border: 1px solid transparent;
+  transition: border-color 0.5s;
+}
+.newPost form input[type=text]:hover {
+  border-color: #b85c38;
+}
+.newPost form input[type=text]:focus {
+  border-color: #b85c38;
+}
+.newPost form input[type=text]::placeholder {
+  color: #5c3d2e;
+}
+.newPost form textarea {
+  background-color: #e0c097;
+  min-height: 10rem;
+  max-width: 100%;
+  border: 1px solid transparent;
+  transition: border-color 0.5s;
+}
+.newPost form textarea:hover {
+  border-color: #b85c38;
+}
+.newPost form textarea:focus {
+  border-color: #b85c38;
+}
+.newPost form textarea::placeholder {
+  color: #5c3d2e;
+}
+.newPost form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+.newPost form div > * {
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.newPost form div label {
+  background-color: #2d2424;
+  color: white;
+  align-self: flex-end;
+  padding: 7px 20px;
+}
+.newPost form div input[type=submit] {
+  align-self: flex-start;
+  padding: 7px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #b85c38;
+  color: #2d2424;
+  transition: background-color 0.5s, color 0.5s;
+}
+.newPost form div input[type=submit]:hover {
+  background-color: #b85c38;
+  color: white;
+}
+
+footer {
+  margin-top: 10rem;
+}
+footer .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage article {
+  margin-bottom: 3rem;
+}
+.homepage article a {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #2d2424;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.homepage article a:hover {
+  color: #b85c38;
+}
+.homepage article p {
+  font-weight: 300;
+}
+
+article .PostTitleGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+article .PostTitleGroup h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+article .PostTitleGroup .icons a {
+  color: #2d2424;
+  transition: color 0.5s;
+}
+article .PostTitleGroup .icons a:hover {
+  color: #b85c38;
+}
+article .PostTitleGroup .icons svg {
+  cursor: pointer;
+  transition: color 0.5s;
+}
+article .PostTitleGroup .icons svg:first-child {
+  margin-right: 1rem;
+}
+article .PostTitleGroup .icons svg:hover {
+  color: #b85c38;
+}
+article .postDate {
+  margin: 1rem 0;
+  font-weight: 300;
+}
+article .postDate p:first-child {
+  margin-right: 1rem;
+}
+article .postDate p:last-child {
+  margin-left: 1rem;
+}
+article .postDate > * {
+  display: inline-block;
+}
+
+.modalBackground {
+  z-index: 999;
+  background-color: rgba(45, 36, 36, 0.9);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+.modalBackground .modalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 8px 1px #2d2424;
+}
+.modalBackground .modalContainer .modalCloseBtn {
+  background-color: #b85c38;
+  align-self: flex-end;
+}
+.modalBackground .modalContainer .modalCloseBtn:hover {
+  background-color: #2d2424;
+}
+.modalBackground .modalContainer h2 {
+  color: #2d2424;
+}
+.modalBackground .modalContainer .modalBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.modalBackground .modalContainer .modalBtns button {
+  font-size: 1rem;
+}
+.modalBackground .modalContainer .modalBtns button:first-child {
+  background-color: #b85c38;
+}
+.modalBackground .modalContainer .modalBtns button:first-child:hover {
+  background-color: #2d2424;
+}
+.modalBackground .modalContainer .modalBtns button:last-child {
+  background-color: #2d2424;
+}
+.modalBackground .modalContainer .modalBtns button:last-child:hover {
+  background-color: #b85c38;
+}
+.modalBackground .modalContainer button {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+/*# sourceMappingURL=style.css.map */

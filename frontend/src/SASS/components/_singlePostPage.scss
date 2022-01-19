@@ -1,0 +1,50 @@
+@use "../utilities/variables" as *;
+
+article {
+  .PostTitleGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+    .icons {
+      a {
+        color: $txt-clr;
+        transition: color 0.5s;
+        &:hover {
+          color: $main-clr;
+        }
+      }
+      svg {
+        cursor: pointer;
+        &:first-child {
+          margin-right: 1rem;
+        }
+        transition: color 0.5s;
+        &:hover {
+          color: $main-clr;
+        }
+      }
+    }
+  }
+
+  .postDate {
+    margin: 1rem 0;
+    font-weight: 300;
+    p {
+      &:first-child {
+        margin-right: 1rem;
+      }
+      &:last-child {
+        margin-left: 1rem;
+      }
+    }
+    & > * {
+      display: inline-block;
+    }
+  }
+}

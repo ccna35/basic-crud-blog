@@ -1,0 +1,33 @@
+@use "../utilities/variables" as *;
+
+nav {
+  margin-bottom: 3rem;
+  .navbar {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      svg {
+        margin-right: 1rem;
+      }
+      font-size: 2rem;
+    }
+    ul {
+      a {
+        text-decoration: none;
+        color: $txt-clr;
+        display: inline-block;
+        cursor: pointer;
+        font-weight: 600;
+        transition: color 0.5s;
+        &:hover {
+          color: $main-clr;
+        }
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}

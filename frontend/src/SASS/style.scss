@@ -1,0 +1,10 @@
+@use "./utilities/resets";
+@use "./utilities//general_rules";
+@use "./components/navbar";
+@use "./components/newPost";
+@use "./components/signup";
+@use "./components/notfound";
+@use "./components/footer";
+@use "./components/homepage";
+@use "./components/singlePostPage";
+@use "./components/modal";
